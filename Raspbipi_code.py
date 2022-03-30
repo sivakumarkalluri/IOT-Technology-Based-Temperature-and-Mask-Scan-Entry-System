@@ -34,39 +34,39 @@ ma2 = 24
 
 def main():
 
-        GPIO.setmode(GPIO.BCM)       # Use BCM GPIO numbers
-        GPIO.setup(LCD_E, GPIO.OUT)  # E
-        GPIO.setup(LCD_RS, GPIO.OUT) # RS
-        GPIO.setup(LCD_D4, GPIO.OUT) # DB4
-        GPIO.setup(LCD_D5, GPIO.OUT) # DB5
-        GPIO.setup(LCD_D6, GPIO.OUT) # DB6
-        GPIO.setup(LCD_D7, GPIO.OUT) # DB7
+        GPIO.setmode(GPIO.BCM)       
+        GPIO.setup(LCD_E, GPIO.OUT)  
+        GPIO.setup(LCD_RS, GPIO.OUT) 
+        GPIO.setup(LCD_D4, GPIO.OUT) 
+        GPIO.setup(LCD_D5, GPIO.OUT) 
+        GPIO.setup(LCD_D6, GPIO.OUT) 
+        GPIO.setup(LCD_D7, GPIO.OUT) 
     
-        GPIO.setup(BUZ, GPIO.OUT) # LED
-        GPIO.setup(led, GPIO.OUT) # LED
+        GPIO.setup(BUZ, GPIO.OUT) 
+        GPIO.setup(led, GPIO.OUT) 
         
-        GPIO.setup(ma1, GPIO.OUT) # LED
-        GPIO.setup(ma2, GPIO.OUT) # LED
+        GPIO.setup(ma1, GPIO.OUT)
+        GPIO.setup(ma2, GPIO.OUT) 
     
         lcd_init()
         lcd_string("Hello Welcome",LCD_LINE_1)
         lcd_string("Monitoring...",LCD_LINE_2)
     
-        GPIO.output(ma2, False) # LED
-        GPIO.output(ma1, False) # LED
+        GPIO.output(ma2, False) 
+        GPIO.output(ma1, False) 
                     
-        GPIO.output(BUZ, True) # LED
+        GPIO.output(BUZ, True)
         
-        GPIO.output(led, True) # LED
-        time.sleep(0.7) # 700 milli second delay
-        GPIO.output(BUZ, False) # LED
-        GPIO.output(led, False) # LED
-        time.sleep(0.7) # 700 milli second delay    
-        GPIO.output(BUZ, True) # LED
-        GPIO.output(led, True) # LED
-        time.sleep(0.7) # 700 milli second delay
-        GPIO.output(BUZ, False) # LED
-        GPIO.output(led, False) # LED
+        GPIO.output(led, True)
+        time.sleep(0.7)
+        GPIO.output(BUZ, False) 
+        GPIO.output(led, False) 
+        time.sleep(0.7)    
+        GPIO.output(BUZ, True) 
+        GPIO.output(led, True) 
+        time.sleep(0.7)
+        GPIO.output(BUZ, False)
+        GPIO.output(led, False)
         temp = 0
         def detect_and_predict_mask(frame, faceNet, maskNet):
     
@@ -186,32 +186,31 @@ def main():
                     lcd_string("    WELCOME      ",LCD_LINE_2) 
                 
                         
-                    GPIO.output(led, True) # LED
+                    GPIO.output(led, True) 
                 
-                    GPIO.output(ma1, True) # LED
+                    GPIO.output(ma1, True)
                    
-                    GPIO.output(ma2, False) # LED
-                    time.sleep(0.7) # 700 milli second delay
-                    GPIO.output(ma2, False) # LED
-                    GPIO.output(ma1, False) # LED
+                    GPIO.output(ma2, False)
+                    time.sleep(0.7)
+                    GPIO.output(ma2, False) 
+                    GPIO.output(ma1, False)
     
-                    time.sleep(4) # 700 milli second delay
+                    time.sleep(4)
                     
-                    GPIO.output(ma2, True) # LED
-                    GPIO.output(ma1, False) # LED
+                    GPIO.output(ma2, True)
+                    GPIO.output(ma1, False) 
 
-                    time.sleep(0.7) # 700 milli second delay
-                    GPIO.output(ma2, False) # LED
-                    GPIO.output(ma1, False) # LED
+                    time.sleep(0.7)
+                    GPIO.output(ma2, False) 
+                    GPIO.output(ma1, False)
                     
                    
                     lcd_byte(0x01, LCD_CMD)
-                    lcd_string("Gate Closed    ",LCD_LINE_1) #commands.getoutput('hostname -I')
+                    lcd_string("Gate Closed    ",LCD_LINE_1) 
         
-                    time.sleep(1.6) # 700 milli second delay
+                    time.sleep(1.6)
                 
-                    GPIO.output(led, False) # LED
-       
+                    GPIO.output(led, False) 
                 
                 
 main()
