@@ -2,3 +2,7 @@ sudo apt-get install -y libhdf5-dev libc-ares-dev libeigen3-dev gcc gfortran lib
 
 
 https://github.com/PINTO0309/Tensorflow-bin/blob/main/previous_versions/download_tensorflow-2.5.0-cp37-none-linux_armv7l_numpy1195.sh
+
+/home/pi/face_detector/deploy.prototxt.txt
+/home/pi/face_detector/res10_300x300_ssd_iter_140000.caffemodel
+/home/pi/mask_detector.model
