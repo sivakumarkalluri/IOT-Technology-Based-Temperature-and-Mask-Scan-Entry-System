@@ -34,9 +34,9 @@ ma2 = 24
 
 def main():
 
-        GPIO.setmode(GPIO.BCM)       
+        GPIO.setmode(GPIO.BCM)      
         GPIO.setup(LCD_E, GPIO.OUT)  
-        GPIO.setup(LCD_RS, GPIO.OUT) 
+        GPIO.setup(LCD_RS, GPIO.OUT)
         GPIO.setup(LCD_D4, GPIO.OUT) 
         GPIO.setup(LCD_D5, GPIO.OUT) 
         GPIO.setup(LCD_D6, GPIO.OUT) 
@@ -45,7 +45,7 @@ def main():
         GPIO.setup(BUZ, GPIO.OUT) 
         GPIO.setup(led, GPIO.OUT) 
         
-        GPIO.setup(ma1, GPIO.OUT)
+        GPIO.setup(ma1, GPIO.OUT) 
         GPIO.setup(ma2, GPIO.OUT) 
     
         lcd_init()
@@ -55,18 +55,18 @@ def main():
         GPIO.output(ma2, False) 
         GPIO.output(ma1, False) 
                     
-        GPIO.output(BUZ, True)
+        GPIO.output(BUZ, True) 
         
         GPIO.output(led, True)
-        time.sleep(0.7)
+        time.sleep(0.7) 
         GPIO.output(BUZ, False) 
         GPIO.output(led, False) 
-        time.sleep(0.7)    
+        time.sleep(0.7)     
         GPIO.output(BUZ, True) 
         GPIO.output(led, True) 
-        time.sleep(0.7)
-        GPIO.output(BUZ, False)
-        GPIO.output(led, False)
+        time.sleep(0.7) 
+        GPIO.output(BUZ, False) 
+        GPIO.output(led, False) 
         temp = 0
         def detect_and_predict_mask(frame, faceNet, maskNet):
     
@@ -109,11 +109,11 @@ def main():
             return (locs, preds)
 
 
-        prototxtPath = r"C:\Users\sivak\Downloads\face_detector\deploy.prototxt.txt"
-        weightsPath = r"C:\Users\sivak\Downloads\face_detector\res10_300x300_ssd_iter_140000.caffemodel"
+        prototxtPath = r"/home/pi/face_detector/deploy.prototxt.txt"
+        weightsPath = r"/home/pi/face_detector/res10_300x300_ssd_iter_140000.caffemodel11"
         faceNet = cv2.dnn.readNet(prototxtPath, weightsPath)
 
-        maskNet = load_model("mask_detector.model")
+        maskNet = load_model("/home/pi/mask_detector.model")
 
 
       
@@ -178,7 +178,6 @@ def main():
                 if label=="Mask" and temp == 1:
 
                     temp = 0
-                            
                     lcd_string("Mask is Detected  ",LCD_LINE_2) 
                     time.sleep(1.6)
                     lcd_string("Gate Opened      ",LCD_LINE_1) 
@@ -188,29 +187,30 @@ def main():
                         
                     GPIO.output(led, True) 
                 
-                    GPIO.output(ma1, True)
+                    GPIO.output(ma1, True) 
                    
-                    GPIO.output(ma2, False)
-                    time.sleep(0.7)
                     GPIO.output(ma2, False) 
-                    GPIO.output(ma1, False)
+                    time.sleep(0.7) 
+                    GPIO.output(ma2, False) 
+                    GPIO.output(ma1, False) 
     
-                    time.sleep(4)
+                    time.sleep(4) 
                     
-                    GPIO.output(ma2, True)
+                    GPIO.output(ma2, True) 
                     GPIO.output(ma1, False) 
 
-                    time.sleep(0.7)
+                    time.sleep(0.7) 
                     GPIO.output(ma2, False) 
-                    GPIO.output(ma1, False)
+                    GPIO.output(ma1, False) 
                     
                    
                     lcd_byte(0x01, LCD_CMD)
                     lcd_string("Gate Closed    ",LCD_LINE_1) 
         
-                    time.sleep(1.6)
+                    time.sleep(1.6) 
                 
                     GPIO.output(led, False) 
+       
                 
                 
 main()
