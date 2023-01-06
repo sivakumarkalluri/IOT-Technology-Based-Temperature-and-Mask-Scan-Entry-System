@@ -92,7 +92,7 @@ Compared to the Raspberry Pi 2 it has:
   Deep Learning Model Results
 </h3>
 
-<img src="icons/accuracy.jpg" alt="Architecture of Raspberry automation system" width="50%" height="50%"><br><br>
+<img src="icons/accuracy.png" alt="Architecture of Raspberry automation system" width="50%" height="50%"><br><br>
 <img src="icons/graph.png" alt="Architecture of Raspberry automation system" width="50%" height="50%">
  
  
