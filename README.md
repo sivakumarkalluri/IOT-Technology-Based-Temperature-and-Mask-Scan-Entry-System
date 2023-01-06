@@ -31,3 +31,12 @@ The COVID-19 pandemic resulted in a substantial loss of human life throughout th
   <li>Raspberry Pi OS</li>
   <li>Buzzer and LED Lights</li>
 </ul>
+
+<h3 style="font-size: 3px; display: inline-block;">
+  <img src="icons/Dataset.png" alt="icon" style="vertical-align: middle; height: 60px;">
+  Dataset
+</h3>
+
+Datasets are taken from Kaggle, face without masks includes faces with various skin colours, different angles, occlusion, etc which consists of 3584 images which are divided into two subfolders as:
+1. With_mask: 1792 Images
+2. Without_mask: 1792 Images
