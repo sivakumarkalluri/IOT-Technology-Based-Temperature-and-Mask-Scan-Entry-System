@@ -40,3 +40,13 @@ The COVID-19 pandemic resulted in a substantial loss of human life throughout th
 Datasets are taken from Kaggle, face without masks includes faces with various skin colours, different angles, occlusion, etc which consists of 3584 images which are divided into two subfolders as:
 1. With_mask: 1792 Images
 2. Without_mask: 1792 Images
+
+<h3 style="font-size: 3px; display: inline-block;">
+  <img src="icons/methodology.png" alt="icon" style="vertical-align: middle; height: 35px;">
+  Methodology
+</h3>
+Architecture for Face Mask Detection
+<img src="icons/Architecture.jpg" alt="Architecture for Face Mask Detection" width="50%" height="50%">
+<br>
+Architecture of Raspberry automation system
+<img src="icons/flowchart.png" alt="Architecture of Raspberry automation system" width="50%" height="50%">
