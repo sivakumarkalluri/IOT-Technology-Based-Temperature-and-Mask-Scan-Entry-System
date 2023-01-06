@@ -50,3 +50,14 @@ Architecture for Face Mask Detection
 <br>
 Architecture of Raspberry automation system
 <img src="icons/flowchart.png" alt="Architecture of Raspberry automation system" width="50%" height="50%">
+<br>
+
+<h3 style="font-size: 3px; display: inline-block;">
+  <img src="icons/Algorithm.png" alt="icon" style="vertical-align: middle; height: 45px;">
+  MobileNetV2
+</h3>
+<p align="justify">
+MobileNetV2 is a convolutional neural network design that aims to be mobile-friendly. It is built on an inverted residual structure, with residual connections between bottleneck levels.
+In this part, the core layers of MobileNet, which are depth-wise separable filters, are described first. The construction of the MobileNet network is detailed next, followed by descriptions of the two-model shrinkage hyperparameters, the width multiplier, and the resolution multiplier.<br>Depth-wise separable convolutions, a sort of factorized convolution that separates a standard convolution into a depth-wise and a pointwise convolution, are the cornerstone of the MobileNet model. MobileNets' depth-wise convolution uses a single filter for each input channel.<br>
+<img src="icons/mobilenet.png" alt="mobilenetv2" width="50%" height="50%">
+The outputs of the depth-wise convolution are then mixed by the pointwise convolution utilizing an 11 convolution. A traditional convolution filter combines inputs in one step to create a new set of outputs. It is divided into two layers by the depth-wise separable convolution: one for filtering and the other for joining. This factorization considerably reduces computation time and model size.</p>
